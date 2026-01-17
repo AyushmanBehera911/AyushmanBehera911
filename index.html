@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Ayushman Behera - Machine Learning Engineer specializing in Deep Learning, Computer Vision, and scalable AI infrastructure.">
+    <title>Ayushman Behera | Portfolio</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        bg: {
+                            main: '#050505',
+                            card: 'rgba(20, 20, 20, 0.6)',
+                            hover: 'rgba(30, 30, 30, 0.8)'
+                        },
+                        accent: {
+                            DEFAULT: '#3b82f6',
+                            glow: 'rgba(59, 130, 246, 0.4)'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    animation: {
+                        'fade-up': 'fadeUp 0.6s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #050505;
+            color: white;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+        
+        .glass {
+            background: rgba(20, 20, 20, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden selection:bg-accent selection:text-white">
+    
+    <div class="fixed inset-0 z-[-1] opacity-30 pointer-events-none">
+        <canvas id="neural-bg" class="w-full h-full"></canvas>
+    </div>
+
+
+    <nav class="fixed top-5 left-1/2 -translate-x-1/2 z-50 glass rounded-full px-6 py-3 flex gap-6 md:gap-8 shadow-2xl shadow-black/50">
+        <a href="#about" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors relative group active-link">
+            Overview
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full opacity-0 group-[.active-link]:opacity-100 transition-opacity"></span>
+        </a>
+        <a href="#projects" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors relative group">
+            Work
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full opacity-0 group-[.active-link]:opacity-100 transition-opacity"></span>
+        </a>
+        <!-- <a href="#experience" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors relative group">
+            Journey
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full opacity-0 group-[.active-link]:opacity-100 transition-opacity"></span>
+        </a> -->
+        <a href="#contact" class="nav-link text-sm font-medium text-gray-400 hover:text-white transition-colors relative group">
+            Contact
+            <span class="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 bg-accent rounded-full opacity-0 group-[.active-link]:opacity-100 transition-opacity"></span>
+        </a>
+    </nav>
+
+    <main class="container mx-auto px-4 md:px-6">
+        <section id="about" class="pt-24 pb-20 min-h-screen flex flex-col justify-center">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto w-full">
+                <div class="glass rounded-3xl p-8 md:col-span-2 md:row-span-2 flex flex-col hover:-translate-y-1 transition-transform duration-300">
+                    <div class="mt-auto">
+                        <span class="font-mono text-sm text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-400">Machine Learning Engineer</span>
+                        <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight my-4">
+                            Building <br/>
+                            <span class="text-accent">Intelligent</span> Systems.
+                        </h1>
+                        <p class="text-gray-400 text-base md:text-lg mb-8 max-w-prose">
+                            Specializing in Deep Learning, Computer Vision, and scalable AI infrastructure. 
+                            Bridging the gap between research papers and production APIs.
+                        </p>
+                        <div class="flex gap-4">
+                            <a href="https://github.com/AyushmanBehera911" class="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all">
+                                <i data-lucide="github" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ayushman-behera-009457330/" class="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all">
+                                <i data-lucide="linkedin" class="w-5 h-5"></i>
+                            </a>
+                            <a href="https://x.com/Ayushma15549907" class="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all">
+                                <i data-lucide="twitter" class="w-5 h-5"></i>
+                            </a>
+                            <a href="mailto:ayushmanbehera1972@gmail.com" class="w-10 h-10 rounded-xl bg-white/5 border border-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="glass rounded-3xl p-0 border-none overflow-hidden relative md:row-span-2 bg-gradient-to-b from-[#222] to-[#111] flex items-center justify-center group">
+                    <img src="./prof.jpeg" alt="Profile" class="cursor-pointer w-full h-full object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+                </div>
+
+
+                <div class="glass rounded-3xl p-6 md:p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <div class="flex items-center justify-between mb-6">
+                        <h3 class="font-heading font-semibold text-lg">Status</h3>
+                        <div class="w-3 h-3 bg-green-500 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.6)]"></div>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-200 font-medium mb-1">Open to Work</p>
+                        <span class="font-mono text-xs text-gray-500">Remote / Hybrid</span>
+                    </div>
+                </div>
+
+
+                <div class="glass rounded-3xl p-6 md:p-8 md:col-span-2 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="font-heading font-semibold text-lg mb-4">Core Stack</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <!-- <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="zap" class="w-3 h-3"></i> PyTorch
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="box" class="w-3 h-3"></i> TensorFlow
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="server" class="w-3 h-3"></i> Docker
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="database" class="w-3 h-3"></i> SQL
+                        </span> -->
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="code" class="w-3 h-3"></i> Python
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="database" class="w-3 h-3"></i> Pandas
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="hash" class="w-3 h-3"></i> NumPy
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                                <i data-lucide="bar-chart-3" class="w-3 h-3"></i> scikit-learn
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="git-branch" class="w-3 h-3"></i> Git
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="github" class="w-3 h-3"></i> GitHub
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="terminal" class="w-3 h-3"></i> Linux / WSL
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="layout" class="w-3 h-3"></i> HTML
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="palette" class="w-3 h-3"></i> CSS
+                        </span>
+
+                        <span class="px-4 py-2 rounded-full bg-white/5 border border-white/5 text-xs text-gray-400 flex items-center gap-2 hover:bg-white/10 hover:text-white hover:border-accent/50 transition-all cursor-default">
+                            <i data-lucide="braces" class="w-3 h-3"></i> JavaScript
+                        </span>
+
+                    </div>
+                </div>
+
+
+                <div class="glass rounded-3xl p-6 md:p-8 hover:-translate-y-1 transition-transform duration-300">
+                    <h3 class="font-heading font-semibold text-lg mb-2">Location</h3>
+                    <p class="text-2xl font-bold text-white mb-1">Bhubaneswar</p>
+                    <span class="font-mono text-xs text-gray-500">UTC+5:30</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects" class="py-20">
+            <div class="max-w-6xl mx-auto mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6 px-4">
+                <div>
+                    <h2 class="font-heading text-4xl md:text-5xl font-bold mb-2">Selected Work</h2>
+                    <p class="text-gray-400">Research, experiments, and production deployments.</p>
+                </div>
+                <a href="https://github.com/AyushmanBehera911" class="px-6 py-3 rounded-xl bg-white/5 border border-white/5 text-sm font-medium hover:bg-white/10 transition-colors">View GitHub</a>
+            </div>
+
+            <div id="projects-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-4">
+
+            </div>
+        </section>
+        
+
+        <!-- <section id="experience" class="py-20">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold mb-12 text-center text-white">Experience</h2>
+                
+                <div class="glass rounded-2xl p-6 md:p-8 mb-6 hover:border-accent/30 transition-colors">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 gap-2">
+                        <h3 class="font-heading text-xl font-bold text-white">Machine Learning Intern</h3>
+                        <span class="font-mono text-sm text-gray-500 bg-white/5 px-3 py-1 rounded-full">2023 - Present</span>
+                    </div>
+                    <p class="text-accent font-medium mb-4">TechCorp AI</p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Optimized Transformer models for edge devices. Reduced inference latency by 40% using quantization. 
+                        Implemented CI/CD pipelines for automating model retraining.
+                    </p>
+                </div>
+                
+                 <div class="glass rounded-2xl p-6 md:p-8 hover:border-accent/30 transition-colors">
+                    <div class="flex flex-col md:flex-row md:justify-between md:items-center mb-4 gap-2">
+                        <h3 class="font-heading text-xl font-bold text-white">Research Assistant</h3>
+                        <span class="font-mono text-sm text-gray-500 bg-white/5 px-3 py-1 rounded-full">2021 - 2023</span>
+                    </div>
+                    <p class="text-accent font-medium mb-4">University Lab</p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Published papers on Adversarial Attacks in Computer Vision. Developed novel defense mechanisms using diffusion models. 
+                        Mentored junior students in Data Structures and Algorithms.
+                    </p>
+                </div>
+            </div>
+        </section> -->
+
+
+        <section id="contact" class="pt-32 pb-20 text-center">
+             <div class="max-w-2xl mx-auto px-4">
+                 <h2 class="font-heading text-4xl md:text-5xl font-bold mb-6 text-white">Ready to collaborate?</h2>
+                 <p class="text-gray-400 mb-12">Open to full-time roles and research collaborations.</p>
+                 
+                 <a href="mailto:ayushmanbehera1972@gmail.com" class="inline-flex glass rounded-full px-8 md:px-12 py-4 md:py-6 text-lg md:text-xl font-medium hover:bg-white/10 hover:scale-105 transition-all mb-20 text-white">
+                     ayushmanbehera1972@gmail.com
+                 </a>
+                 
+                 <footer class="border-t border-white/10 pt-10 text-sm text-gray-500">
+                     <p>&copy; 2024 Ayushman Behera.</p>
+                 </footer>
+             </div>
+        </section>
+
+    </main>
+
+
+    <script src="data/projects.js"></script>
+    <script src="js/bg-animation.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
